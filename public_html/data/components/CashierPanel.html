@@ -1,0 +1,56 @@
+<form style="margin:0px;" method="POST" id="Filter" action="javascript:void(null);" onsubmit="updateRequests('',event)">
+    <div style="padding:5px;" class="pull-right">
+        <label style="display: inline-block; margin-right: 10px; " class="checkbox ">
+            <input name="payed" type="checkbox"checked > Занесенные
+        </label>
+        <label style="display: inline-block;" class="checkbox ">
+            <input name ="unpayed" type="checkbox" checked> Не занесенные
+        </label></br>
+        <input type="submit" class="btn  pull-right" name ="filterSubmit" value="Применить">
+    </div>
+
+    <div id="range-container">
+
+        <div  class="input-daterange input-prepend input-append" id="datepicker">
+
+            <span class="add-on"> Период: c</span>
+            <input type="text" value = "<?php echo $data[0]; ?>" class="input-small" id= "startDate" name="startDate" />
+            <span class="add-on"> до </span>
+            <input type="text" value = "<?php echo $data[1]; ?>" class="input-small" id= "endDate" name="endDate" /><br><br>
+
+            <span class="add-on"> Менеджер: </span><?php echo $data['agents'] ;?>
+            <span style='margin-left:10px'  class="add-on"> Агент: </span> <div id="agents" style="display:inline"> </div>
+
+    </div>
+    <div class=" hide input-prepend ">
+
+        <span class="add-on"> Страница № </span>
+        <input type="text"  class="input-mini" id="page" name="page" />
+
+    </div>
+</form>
+
+
+
+
+<script>
+    $( document ).ready(function()
+    {
+        $('#range-container .input-daterange').datepicker({
+            language: "ru",
+            format: "dd.mm.yyyy"
+        });
+        /* var date = new Date();
+
+         year = date.getFullYear();
+         month = date.getMonth()+1;
+         day =  date.getDate();
+         if (day<10)
+         day = "0"+day;
+         var startDate = day + "." + month + "."+ year
+
+         $('#Filter #startDate').val(startDate);*/
+    });
+
+
+</script>

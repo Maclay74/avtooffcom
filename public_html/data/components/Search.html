@@ -1,0 +1,41 @@
+<form style="margin:0px;" method="POST" id="Search" action="javascript:void(null);" onsubmit="updateRequests('',event)">
+
+    <div class=" input-prepend ">
+        <span class="add-on">Владелец</span>
+        <input type="text"  id="name" name="name" />
+    </div>
+
+    <div class=" input-prepend ">
+        <span class="add-on">Автомобиль</span>
+        <input type="text"  id="number" name="car" />
+    </div>
+
+
+
+    <input type="submit" class="btn  pull-right" value="Применить">
+</form>
+
+
+
+
+<script>
+    $( document ).ready(function()
+    {
+        $('#range-container .input-daterange').datepicker({
+            language: "ru",
+            format: "dd.mm.yyyy"
+        });
+        /* var date = new Date();
+
+         year = date.getFullYear();
+         month = date.getMonth()+1;
+         day =  date.getDate();
+         if (day<10)
+         day = "0"+day;
+         var startDate = day + "." + month + "."+ year
+
+         $('#Filter #startDate').val(startDate);*/
+    });
+
+
+</script>
